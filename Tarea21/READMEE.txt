@@ -1,0 +1,1 @@
+Este programa lo que hace es que obtiene el determinante de una matriz de manera recursiva. Ademas tenemos que se recerva memoria de dos maneras, puede ser continua o no continua. 
