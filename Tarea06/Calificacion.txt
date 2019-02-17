@@ -1,0 +1,8 @@
+Calificación: 9
+
+-1 Falto checar division por cero y dominio de tangente.
+
+
+
+
+
