@@ -1,0 +1,54 @@
+Para poder repartir los bienes entre más socios, se debe de cambiar la base usada.En el caso de dos socios se convirtieron los números del 0 al numero de casos - 1 a base 2.Si se quiere repartir entre m socios se deben convertir estos números a base m y checar las diferencias por parejas de cada uno de los socios. Probablemente se debería de tomar la diferencia promedio que hay entre todos y la que tenga la menor diferencia promedio es la mejor. 
+
+En particular se cambiaría:
+
+void dec2bin(int num, int *vec, int tamano){
+	for(int i = 0; i<tamano; ++i){
+		vec[i] = num % 2;
+		num -= num % 2;
+		num = num/2;
+	}
+}
+
+Quedaría de la siguiente manera:
+
+void dec2bin(int num, int *vec, int tamano, int m){ //m es el número de socios
+	for(int i = 0; i<tamano; ++i){
+		vec[i] = num % m;
+		num -= num % m;
+		num = num/m;
+	}
+}
+
+Además tendíamos que modificar la siguiente función:
+
+float diferenciaDinero(int *casos, int tamano, bien *bienes){
+	float socio1 = 0, socio2 = 0, dif = 0;
+	for (int i = 0; i < tamano; i++){
+		if (casos[i] == 1){
+			socio1 += bienes[i].valor;
+		}
+		else{
+			socio2 += bienes[i].valor;
+		}
+	}
+	if (socio2 < socio1){
+		dif = socio1 - socio2;
+	}
+	else{
+		dif = socio2 - socio1;
+	}
+}
+
+quedaría de la siguiente manera:
+
+float diferenciaDinero(int *casos, int tamano, bien *bienes, int m){  //m es el número de socios
+	float *socios = (float *)malloc(sizeof(float)*m);
+	for (int i = 0; i < tamano; i++){
+		socios[casos[i]] += bienes[i].valor;
+	}
+	dif = des_estadar(socios); //para esto se necesita otra funcion que la calcule la desviación estandar en el vector socios.
+	return dif;
+}
+
+De esta manera se logra obtener el mejor reparto de los bienes entre m socios.

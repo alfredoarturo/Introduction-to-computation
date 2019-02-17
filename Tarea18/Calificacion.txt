@@ -1,0 +1,6 @@
+Calificación: 8.5
+
+-.5 ¿Cuanto es mi monto inicial?
+-1 Tu programa permite apostar mas de lo que tienes
+-.5 Puedo escoger un numero mayor a 37
+
