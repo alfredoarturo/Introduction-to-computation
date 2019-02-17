@@ -1,0 +1,7 @@
+El proyecto final será un space invaders.
+Este en un juego en donde hay extraterestresque son destruidos por el usuario.
+El usuario controla un cañón con el cual puede dispara a los extraterrestres. Este cañón a su vez tiene vida limitada, la cual es disminuida cada vez que los extraterrestres le disparan al usuario. 
+Van a existir varios tipos de extraterrestres, los cuales generarán una cantidad distinta de daño al usuario.
+Además de la vida del cañón que tenga el usuario, habrá barreras con las cuales el usuario puede protegerse. Estas barreras también tienen una cantidad limitada de vida.
+Todo esto se programará usando el lenguaje de programación c.
+Para los gráficos se usará la librería shell.

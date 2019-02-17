@@ -1,0 +1,6 @@
+int x, y, *p;
+
+x = 3; // se asigna 3 a la variable x
+p = &x; // a p se le asigna la ubicación de memoria de x, que es 3
+y = *P // a y se le asigna el valor de la ubicación de memmoria en p, que es 3.
+*p = x+y // a la ubicación de memoria de p se le asigna el valor de la suma de x+y, que es 6. Aquí x = 6 y *p = 6.
